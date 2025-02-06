@@ -20,6 +20,7 @@
             <a href="#contact">Contact</a> <!-- Link to contact section -->
         </nav>
     </header>
+
     <section class="home">
         <div class="home-img">
             <img src="main.jpg" alt="Main Image">
@@ -37,6 +38,23 @@
             <a href="https://t.me/waspros" class="btn">Hire me</a> <!-- Telegram username -->
         </div>
     </section>
+
+    <!-- Exchanger API Integration -->
+    <script src="https://my.kolo.in/lib/exchanger.umd.js"></script>
+    <div id="widget"></div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const exchanger = window.Exchanger.init;
+            const exchangerSdk = exchanger({
+                target: document.getElementById('widget'),
+                params: {
+                    apiKey: '21135dc05ecc01e015abc212dea0e4344ee402c11bcc812b05ebb583c09289d9'
+                }
+            });
+
+            exchangerSdk.show();
+        });
+    </script>
 
     <!-- Intercom Script -->
     <script>
